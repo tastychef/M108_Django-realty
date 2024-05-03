@@ -1,0 +1,48 @@
+{% load static %}
+<html >
+<head>
+	<title>САЙТ</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+
+</head>
+<body>
+<div class="shell">
+	<div class="border">
+
+		<div id="navigation">
+			<ul>
+			    <li><a href="/" class="active">Главная</a></li>
+			    <li><a href="/admin">Админ панель</a></li>
+
+			</ul>
+		</div>
+
+		<div id="main">
+			<div id="content" class="left">
+				<div class="projects">
+					<h3>{{ project.name_project }}</h3>
+					<div class="item">
+						<div class="text left">
+							<h4><b style="color: red">ID введенный: {{ project.get_id }}</b>
+							<br>
+							<b style="color: green">ID системный: {{ project.id }}</b></h4>
+							<br>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cl">&nbsp;</div>
+		</div>
+
+
+	</div>
+
+
+</div>
+</body>
+</html>
